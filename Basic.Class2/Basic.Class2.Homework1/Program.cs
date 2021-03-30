@@ -30,36 +30,37 @@ namespace Basic.Class2.Homework1
             string division = "/";
 
 
-            int num1 = 0;
-            bool isValidNumber1 = int.TryParse(inputNumber1, out num1);
-            int num2 = 0;
-            bool isValidNumber2 = int.TryParse(inputNumber2, out num2);
+            double num1 = 0;
+            bool isValidNumber1 = double.TryParse(inputNumber1, out num1);
+            double num2 = 0;
+            bool isValidNumber2 = double.TryParse(inputNumber2, out num2);
 
-            int sum1 = num1 + num2;
-            int sub = num1 - num2;
-            int multi = num1 * num2;
-            int div = num1 / num2;
+            double sum1 = num1 + num2;
+            double sub = num1 - num2;
+            double multi = num1 * num2;
+            double div = num1 / num2;
 
 
             if(inputOperation == sum)
             {
-                Console.WriteLine(sum1);
+                Console.WriteLine("The result of sum is " + sum1);
+
             }
-            if (inputOperation == subtract)
+            else if (inputOperation == subtract)
             {
-                Console.WriteLine(sub);
+                Console.WriteLine("The result of subtract is " + sub);
             }
-            if (inputOperation == multiplication)
+            else if (inputOperation == multiplication)
             {
-                Console.WriteLine(multi);
+                Console.WriteLine("The result of multiplication is " + multi);
             }
-            if (inputOperation == division)
+            else if (inputOperation == division)
             {
-                Console.WriteLine(div);
+                Console.WriteLine("The result of division is " + div);
             }
             else
             {
-                Console.WriteLine("Please enter valid numbers");
+                Console.WriteLine("Please enter valid operation");
             }
 
 
@@ -86,16 +87,16 @@ namespace Basic.Class2.Homework1
             Console.WriteLine("Enter the fourth number");
             string fourthInput = Console.ReadLine();
 
-            int number1 = 0;
-            bool number1Valid = int.TryParse(firstInput, out number1);
-            int number2 = 0;
-            bool number2Valid = int.TryParse(secoundInput, out number2);
-            int number3 = 0;
-            bool number3Valid = int.TryParse(thirdInput, out number3);
-            int number4 = 0;
-            bool number4Valid = int.TryParse(fourthInput, out number4);
+            double number1 = 0;
+            bool number1Valid = double.TryParse(firstInput, out number1);
+            double number2 = 0;
+            bool number2Valid = double.TryParse(secoundInput, out number2);
+            double number3 = 0;
+            bool number3Valid = double.TryParse(thirdInput, out number3);
+            double number4 = 0;
+            bool number4Valid = double.TryParse(fourthInput, out number4);
 
-            int average = (number1 + number2 + number3 + number4) / 4;
+            double average = (number1 + number2 + number3 + number4) / 4;
             if (average % 2 == 0) {
                 Console.WriteLine("The average of four inputs numbers is " + average);
             }
