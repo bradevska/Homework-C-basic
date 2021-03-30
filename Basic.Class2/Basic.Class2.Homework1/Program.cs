@@ -96,14 +96,11 @@ namespace Basic.Class2.Homework1
             double number4 = 0;
             bool number4Valid = double.TryParse(fourthInput, out number4);
 
+
+
             double average = (number1 + number2 + number3 + number4) / 4;
-            if (average % 2 == 0) {
-                Console.WriteLine("The average of four inputs numbers is " + average);
-            }
-            else
-            {
-                Console.WriteLine("Enter even numbers");
-            }
+
+            Console.WriteLine("The averige of inputs is " + average);
 
 
             //## Task 3:
@@ -117,6 +114,19 @@ namespace Basic.Class2.Homework1
             //*After Swapping:
             //*First Number: 8
             //* Second Number: 5
+
+            Console.WriteLine("Enter the first number");
+            string firstInputNumber = Console.ReadLine();
+            Console.WriteLine("Enter the second number");
+            string secoundInputNumber = Console.ReadLine();
+            
+            int input1 = int.Parse(secoundInputNumber);
+            int input2 = int.Parse(firstInputNumber);
+
+            Console.WriteLine(input1);
+            Console.WriteLine(input2);
+
+
 
             Console.ReadLine();
         }
