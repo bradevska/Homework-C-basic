@@ -41,6 +41,16 @@ namespace Basic.Class2.Homework1
             double div = num1 / num2;
 
 
+            if((isValidNumber1 )|| (isValidNumber2 )) 
+            {
+                Console.WriteLine("Valid Parsing. " + " The first parsing number is " + num1 + " The secound parsing number is " + num2);
+            }else
+            {
+                Console.WriteLine("Not valid parsing");
+            }
+
+
+
             if(inputOperation == sum)
             {
                 Console.WriteLine("The result of sum is " + sum1);
@@ -97,8 +107,17 @@ namespace Basic.Class2.Homework1
             bool number4Valid = double.TryParse(fourthInput, out number4);
 
 
+            if ((number1Valid) || (number2Valid) || (number3Valid) || (number4Valid))
+            {
+                Console.WriteLine("Valid Parsing. " + " " + number1 + " " + number2 + " " + number3 + " " + number4);
+            }
+            else
+            {
+                Console.WriteLine("Not valid parsing");
 
-            double average = (number1 + number2 + number3 + number4) / 4;
+            }
+
+                double average = (number1 + number2 + number3 + number4) / 4;
 
             Console.WriteLine("The averige of inputs is " + average);
 
@@ -120,11 +139,16 @@ namespace Basic.Class2.Homework1
             Console.WriteLine("Enter the second number");
             string secoundInputNumber = Console.ReadLine();
             
-            int input1 = int.Parse(secoundInputNumber);
-            int input2 = int.Parse(firstInputNumber);
+            int input1 = int.Parse(firstInputNumber);
+            int input2 = int.Parse(secoundInputNumber);
 
-            Console.WriteLine(input1);
-            Console.WriteLine(input2);
+            int temorary = input1;
+            input1 = input2;
+            input2 = temorary;
+
+            Console.WriteLine("The value of first number is: "  + input1);
+            Console.WriteLine("The value of second number is: "  + input2);
+            Console.WriteLine();
 
 
 
