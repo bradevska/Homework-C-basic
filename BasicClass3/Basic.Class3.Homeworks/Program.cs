@@ -38,13 +38,12 @@ namespace Basic.Class3.Homeworks
 
             //    if (input % 2 == 0)
             //    {
-            //        sum += input;
-            //        Console.WriteLine("The sum of even number in array is: " + sum);
+            //        sum += input;       
             //    } else
             //    {
             //        Console.WriteLine("Odd number");
             //    }
-
+            //Console.WriteLine("The sum of even number in array is: " + sum);
             //}
 
             //Console.ReadLine();
@@ -133,21 +132,29 @@ namespace Basic.Class3.Homeworks
             Console.WriteLine("Enter nuber 1 or 2");
             int inputNumber = int.Parse(Console.ReadLine());
 
-            foreach (string[] stringArray  in arrayOfStudentsArrays)
+            if (inputNumber == 1)
             {
-                foreach(string names in stringArray)
-                    if (inputNumber == 1)
-                    { 
-                     Console.WriteLine(names[0]);
-                    }
-                    else if (inputNumber == 2)
-                    {
-                        Console.WriteLine(names[1]);
-                    }
-                    
+
+                foreach (string names in arrayOfStudentsArrays[inputNumber - 1])
+                {
+                    Console.WriteLine(names);
+                }
             }
+            else if (inputNumber == 2)
+            {
+                foreach (string names in arrayOfStudentsArrays[inputNumber - 1])
+                {
+                    Console.WriteLine(names);
+                }
 
 
+            }
+            else { 
+                    {
+                        Console.WriteLine("Wrong input");
+                    }
+
+            }
             Console.ReadLine();
 
 
@@ -157,3 +164,4 @@ namespace Basic.Class3.Homeworks
         }
     }
 }
+   
