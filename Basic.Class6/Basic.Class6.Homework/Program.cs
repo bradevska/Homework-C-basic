@@ -12,19 +12,23 @@ namespace Basic.Class6.Homework
 
        static void RaceCars(Carr car1, Carr car2)
         {
-            
-            if(car1.Speed > car2.Speed)
+
+            int car1Speed = car1.CalculateSpeed(Driver);
+            int car2Speed = car2.CalculateSpeed(Driver);
+            if(car1Speed > car2Speed)
             {
-                Console.WriteLine("car1 is faster");
+                Console.WriteLine("Car1  is faster");
             }
             else
             {
-                Console.WriteLine("car2 is faster");
+                Console.WriteLine("Car2 is faster");
             }
                 
         }
         static void Main(string[] args)
         {
+           
+
             Carr car1 = new Carr();
             car1.Model = "Citroen";
             car1.Speed = 120;
@@ -49,6 +53,7 @@ namespace Basic.Class6.Homework
             string firstCarInput = Console.ReadLine();
             Console.WriteLine($" Enter second choice: \n {car1.Model}  \n {car2.Model} \n {car3.Model} \n {car4.Model}");
             string secondcarInput = Console.ReadLine();
+            Console.WriteLine(car1);
 
             
 
