@@ -14,9 +14,10 @@ namespace Basic.Class6.Homework.Clases
         // CalculateSpeed() that takes a driver object and calculates the skill
         // multiplied by the speed of the car and return it as a result.
 
-       public string CalculatesSpeed()
+       public int CalculateSpeed(Driver driver)//zasto kako parametar Driver driver??? Razbiram deka e od clasata Deriver ali zasto pak so malo driver
         {
-            return "$  "
+           
+            return Speed * driver.Skill;
         }
 
 
