@@ -13,47 +13,46 @@ namespace Basic.Class6.Homework
        static void RaceCars(Carr car1, Carr car2)
         {
 
-            int car1Speed = car1.CalculateSpeed(Driver);
-            int car2Speed = car2.CalculateSpeed(Driver);
+            int car1Speed = car1.CalculateSpeed();
+            int car2Speed = car2.CalculateSpeed();
             if(car1Speed > car2Speed)
             {
-                Console.WriteLine("Car1  is faster");
+                Console.WriteLine($"{car1.Model} is faster");
             }
             else
             {
-                Console.WriteLine("Car2 is faster");
+                Console.WriteLine($"{car2.Model}  is faster");
             }
                 
         }
         static void Main(string[] args)
         {
-           
 
-            Carr car1 = new Carr();
-            car1.Model = "Citroen";
-            car1.Speed = 120;
-            car1.Driver = "Jon";
+            Carr[] carArr = new Carr[]
+            {
+                new Carr("Opel" , 100 , "Leo"),
+                new Carr("Toyota" , 150 , "Leon"),
+                new Carr("Mercedes" , 180 , "Filip"),
+                new Carr("Seat" , 120 , "Petar"),
+                
+            };
 
-            Carr car2 = new Carr();
-            car2.Model = "Opel";
-            car2.Speed = 100;
-            car2.Driver = "Leo";
+            Driver[] driverArr = new Driver[]
+            {
+                new Driver("Leo" , 4 ),
+                new Driver("Leon" , 3 ),
+                new Driver("Filip" , 2 ),
+                new Driver("Petar" ,5 ),
 
-            Carr car3 = new Carr();
-            car3.Model = "Toyota";
-            car3.Speed = 125;
-            car3.Driver = "Petar";
+            };
 
-            Carr car4 = new Carr();
-            car4.Model = "Mercedes";
-            car4.Speed = 180;
-            car4.Driver = "Filip";
 
-            Console.WriteLine($" Enter first choice: \n {car1.Model}  \n {car2.Model} \n {car3.Model} \n {car4.Model}");
+
+            Console.WriteLine($" Enter first choice: {carArr[0]} {carArr[1]} {carArr[2]} {carArr[3]} ");
             string firstCarInput = Console.ReadLine();
-            Console.WriteLine($" Enter second choice: \n {car1.Model}  \n {car2.Model} \n {car3.Model} \n {car4.Model}");
+            Console.WriteLine(" Enter second choice: ");
             string secondcarInput = Console.ReadLine();
-            Console.WriteLine(car1);
+          
 
             
 

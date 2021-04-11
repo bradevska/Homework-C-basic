@@ -10,6 +10,14 @@ namespace Basic.Class6.Homework.Clases
         public int Speed { get; set; }
         public string Driver { get; set; }
 
+        public Carr( string model, int speed, string driver)
+        {
+            Model = model;
+            Speed = speed;
+            Driver = driver;
+        }
+
+
         // Make a method of the Car class called :
         // CalculateSpeed() that takes a driver object and calculates the skill
         // multiplied by the speed of the car and return it as a result.
