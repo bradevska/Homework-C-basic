@@ -15,6 +15,11 @@ namespace Basic.Class6.Homework.Clases
             Skill = skill;
 
         }
+
+        public Driver()
+        {
+
+        }
     }
     
 }

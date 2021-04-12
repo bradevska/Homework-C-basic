@@ -10,30 +10,16 @@ namespace Basic.Class6.Homework
         //Make 4 car objects and 4 driver objects.
         // Ask the user to select a two cars and two drivers for the cars.Add the drivers to the cars and call the RaceCars() methods
 
-       static void RaceCars(Carr car1, Carr car2)
-        {
-
-            int car1Speed = car1.CalculateSpeed();
-            int car2Speed = car2.CalculateSpeed();
-            if(car1Speed > car2Speed)
-            {
-                Console.WriteLine($"{car1.Model} is faster");
-            }
-            else
-            {
-                Console.WriteLine($"{car2.Model}  is faster");
-            }
-                
-        }
+       
         static void Main(string[] args)
         {
 
-            Carr[] carArr = new Carr[]
+            Car[] carArr = new Car[]
             {
-                new Carr("Opel" , 100 , "Leo"),
-                new Carr("Toyota" , 150 , "Leon"),
-                new Carr("Mercedes" , 180 , "Filip"),
-                new Carr("Seat" , 120 , "Petar"),
+                new Car("Opel" , 100 ),
+                new Car("Toyota" , 150 ),
+                new Car("Mercedes" , 180 ),
+                new Car("Seat" , 120 ),
                 
             };
 
@@ -45,21 +31,44 @@ namespace Basic.Class6.Homework
                 new Driver("Petar" ,5 ),
 
             };
+            Car car1 = new Car();
+            Car car2 = new Car();
+            Driver firstDriver = new Driver();
+            Driver secondDriver = new Driver();
 
-
-
-            Console.WriteLine($" Enter first choice: {carArr[0]} {carArr[1]} {carArr[2]} {carArr[3]} ");
-            string firstCarInput = Console.ReadLine();
-            Console.WriteLine(" Enter second choice: ");
-            string secondcarInput = Console.ReadLine();
-          
-
+            Console.WriteLine($"Please enter car No.1 with driver " +
+                $"\n {carArr[0].Model}, driver is  {driverArr[0].Name} " +
+                $"\n {carArr[1].Model}, driver is  {driverArr[1].Name}" +
+                $"\n {carArr[2].Model}, driver is  {driverArr[2].Name}" +
+                $"\n {carArr[3].Model}, driver is  {driverArr[3].Name}");
+            string userInputOne = Console.ReadLine();
+            Console.WriteLine($"Please enter car No.2 with driver " +
+                $"\n {carArr[0].Model},driver is{driverArr[0].Name}" +
+                $"\n {carArr[1].Model},driver is {driverArr[1].Name}" +
+                $"\n {carArr[2].Model},driver is {driverArr[2].Name}" +
+                $"\n {carArr[3].Model},driver is {driverArr[3].Name}");
+            string userInputTwo = Console.ReadLine();
             
-
-
-
-
-
+            RaceCars(car1, car2);
         }
+        
+        static void RaceCars(Car car1, Car car2)
+        {
+
+            int car1Speed = car1.CalculateSpeed();
+            int car2Speed = car2.CalculateSpeed();
+            if (car1Speed > car2Speed)
+            {
+                Console.WriteLine($"From two selected cars {car1.Model} is faster");
+            }
+            else 
+            {
+                Console.WriteLine($"From two selected cars {car2.Model}  is faster");
+            }
+
+            Console.ReadLine();
+        }
+
+       
     }
 }
