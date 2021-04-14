@@ -28,10 +28,10 @@ namespace Basic.Class6.Homework.Clases
 
         }
 
-        public int CalculateSpeed()
+        public int CalculateSpeed(Driver driver)
         {
 
-            return Speed * Driver.Skill;
+            return Speed * driver.Skill;
         }
 
         
