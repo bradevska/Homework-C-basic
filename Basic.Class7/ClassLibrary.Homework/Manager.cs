@@ -14,6 +14,7 @@ namespace ClassLibrary.Homework
         {
             FirstName = firstName;
             LastName = lastName;
+             
 
         }
 
